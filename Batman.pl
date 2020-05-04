@@ -40,7 +40,7 @@ MMMMMMMMMMMMMMMMMMMMM                              MMMMMMMMMMMMMMMMMMMMM
 EOTEXT
 
 print "Botnetsells dropped yo shit" . ($port ? $port : "Botnetsells own you") . " With " . 
-  ($size ? "$size-Slammed" : "65500") . "Bots" . 
+  ($size ? "$size-Slammed" : "655000") . "Bots" . 
   ($time ? " for $time seconds" : "") . "\n";
 print "Stop NULLING With Ctrl-C\n" unless $time;
  
